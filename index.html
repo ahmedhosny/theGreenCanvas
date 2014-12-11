@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>The Green Canvas by ahmedhosny</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>The Green Canvas</h1>
+        <p>Art evaluation analytics</p>
+
+        <p class="view"><a href="https://github.com/ahmedhosny/theGreenCanvas">View the Project on GitHub <small>ahmedhosny/theGreenCanvas</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/ahmedhosny/theGreenCanvas/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/ahmedhosny/theGreenCanvas/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/ahmedhosny/theGreenCanvas">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h2>
+<a id="computer-science-109-final-project---fall-2014" class="anchor" href="#computer-science-109-final-project---fall-2014" aria-hidden="true"><span class="octicon octicon-link"></span></a>Computer Science 109 Final Project - Fall 2014</h2>
+
+<h3>
+<a id="ahmed-hosny-jili-huang-yingyi-wang" class="anchor" href="#ahmed-hosny-jili-huang-yingyi-wang" aria-hidden="true"><span class="octicon octicon-link"></span></a>Ahmed Hosny, Jili Huang, Yingyi Wang</h3>
+
+<h3>
+<a id="background-and-motivation" class="anchor" href="#background-and-motivation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Background and Motivation</h3>
+
+<p>The team is interested in quantifying aesthetics as an extremely subjective and quality-based feature. We are all from design background and we always want to explore the middle realm between artistic evaluation and scientific statistics. How to evaluate a painting? Will there be any interesting relationships between its evaluation (in terms of price) and its pixels? Taking into consideration other factors such as artist's prominence, the project will attempt to answer questions such as: Are paintings of specific contrast tend to be evaluated higher than those with high saturation? Are paintings with sharp edges or on bigger canvases tend to sell cheaper? Focus will be on contemporary paintings as a twist on the exaggerated prices some of these pieces have reached - especially when many are comparable to children's artwork.</p>
+
+<h3>
+<a id="project-objectives" class="anchor" href="#project-objectives" aria-hidden="true"><span class="octicon octicon-link"></span></a>Project Objectives</h3>
+
+<p>This project aims at studying art valuation criterion with a specific focus on paintings. While the art market itself is responsible for fluctuations and trends, aesthetics plays an important role in evaluating art pieces. Image processing will be utilized to extract pixel information and attempt to correlate these with the peices' current market value. Therefore, the plan is to:
+1.Use data to explore trends in painting evaluation. How is information about the painting or even at the pixel level influencing evaluation?
+2.Develop a machine learning framework that can predict pricing. Can we develop an algorithm that can replace expert art consultants and can be used by, say, auction houses?</p>
+
+<h3>
+<a id="data-acquisition" class="anchor" href="#data-acquisition" aria-hidden="true"><span class="octicon octicon-link"></span></a>Data Acquisition</h3>
+
+<p>Data will be collected from two sources:
+1.Internet: Scrape information off websites such as <a href="http://artsalesindex.artinfo.com/asi/lots/3426445">http://artsalesindex.artinfo.com/asi/lots/3426445</a> . A Pandas dataframe will be constructed containing the columns: Artist's name, Year, Country, Painting Name, Style, Material, size, Markings and Price with time sold.
+2.Image of the painting itself: Use openCV and PIL libraries to add features to the dataframe such as: Face detection - tell us whether it is a portrait or not, Top dominant colors, large/small Areas of solid color, Edges, contrast, brightness, hue, saturation…</p>
+
+<h3>
+<a id="design-overview" class="anchor" href="#design-overview" aria-hidden="true"><span class="octicon octicon-link"></span></a>Design Overview</h3>
+
+<p>This will be explored in three stages:
+1.Explore trends by grouping by artist, location, material and so on. Which material or style cost the most? Or some interesting discovery such as which size of the drawings would be most expensive in terms of unit area. These will be based on pandas dataframe manipulation and grouping. We will also attempt to reduce dimentionality of the data and explore the principal components.
+2.After pixel information is added to the dataframe, stage one will be repeated to explore additional trends
+3.Build a ML model that is able to predict value. Explore different ML techniques learned in class and which is more appropriate for our application. Which feature is most influential on the evaluation?</p>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/ahmedhosny">ahmedhosny</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
