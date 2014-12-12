@@ -48,23 +48,25 @@
 <a id="project-objectives" class="anchor" href="#project-objectives" aria-hidden="true"><span class="octicon octicon-link"></span></a>Project Objectives</h3>
 
 <p>This project aims at studying art valuation criterion with a specific focus on paintings. While the art market itself is responsible for fluctuations and trends, aesthetics plays an important role in evaluating art pieces. Image processing will be utilized to extract pixel information and attempt to correlate these with the peices' current market value. Therefore, the plan is to:
-1.Use data to explore trends in painting evaluation. How is information about the painting or even at the pixel level influencing evaluation?
-2.Develop a machine learning framework that can predict pricing. Can we develop an algorithm that can replace expert art consultants and can be used by, say, auction houses?</p>
+1. Use data to explore trends in painting evaluation. How is information about the painting or even at the pixel level influencing evaluation?
+2. Develop a machine learning framework that can predict pricing. Can we develop an algorithm that can replace expert art consultants and can be used by, say, auction houses?</p>
 
 <h3>
 <a id="data-acquisition" class="anchor" href="#data-acquisition" aria-hidden="true"><span class="octicon octicon-link"></span></a>Data Acquisition</h3>
 
 <p>Data will be collected from two sources:
-1.Internet: Scrape information off websites such as <a href="http://artsalesindex.artinfo.com/asi/lots/3426445">http://artsalesindex.artinfo.com/asi/lots/3426445</a> . A Pandas dataframe will be constructed containing the columns: Artist's name, Year, Country, Painting Name, Style, Material, size, Markings and Price with time sold.
-2.Image of the painting itself: Use openCV and PIL libraries to add features to the dataframe such as: Face detection - tell us whether it is a portrait or not, Top dominant colors, large/small Areas of solid color, Edges, contrast, brightness, hue, saturation…</p>
+1. Internet: Scrape information off websites such as <a href="http://artsalesindex.artinfo.com/asi/lots/3426445">http://artsalesindex.artinfo.com/asi/lots/3426445</a> . A Pandas dataframe will be constructed containing the columns: Artist's name, Year, Country, Painting Name, Style, Material, size, Markings and Price with time sold.
+2. Image of the painting itself: Use openCV and PIL libraries to add features to the dataframe such as: Face detection - tell us whether it is a portrait or not, Top dominant colors, large/small Areas of solid color, Edges, contrast, brightness, hue, saturation…</p>
 
 <h3>
 <a id="design-overview" class="anchor" href="#design-overview" aria-hidden="true"><span class="octicon octicon-link"></span></a>Design Overview</h3>
 
 <p>This will be explored in three stages:
-1.Explore trends by grouping by artist, location, material and so on. Which material or style cost the most? Or some interesting discovery such as which size of the drawings would be most expensive in terms of unit area. These will be based on pandas dataframe manipulation and grouping. We will also attempt to reduce dimentionality of the data and explore the principal components.
-2.After pixel information is added to the dataframe, stage one will be repeated to explore additional trends
-3.Build a ML model that is able to predict value. Explore different ML techniques learned in class and which is more appropriate for our application. Which feature is most influential on the evaluation?</p>
+1. Explore trends by grouping by artist, location, material and so on. Which material or style cost the most? Or some interesting discovery such as which size of the drawings would be most expensive in terms of unit area. These will be based on pandas dataframe manipulation and grouping. We will also attempt to reduce dimentionality of the data and explore the principal components.
+2. After pixel information is added to the dataframe, stage one will be repeated to explore additional trends
+3. Build a ML model that is able to predict value. Explore different ML techniques learned in class and which is more appropriate for our application. Which feature is most influential on the evaluation?</p>
+
+<hr>
 
 <h3>
 <a id="data-scraping" class="anchor" href="#data-scraping" aria-hidden="true"><span class="octicon octicon-link"></span></a>Data Scraping</h3>
@@ -109,9 +111,7 @@
 
 <p><img src="https://raw.githubusercontent.com/ahmedhosny/theGreenCanvas/gh-pages/images/0DATAFRAME.png" alt=""></p>
 
-<blockquote>
-<p>We analyzed 35407 paintings at a total valuation of $9,366,754,845</p>
-</blockquote>
+<hr>
 
 <h3>
 <a id="image-processing" class="anchor" href="#image-processing" aria-hidden="true"><span class="octicon octicon-link"></span></a>Image processing</h3>
@@ -182,8 +182,14 @@ A post-processing step is required here. The RGB value of the most dominant colo
 
 <p><img src="https://raw.githubusercontent.com/ahmedhosny/theGreenCanvas/gh-pages/images/10DataWithImageProcessing.png" alt=""></p>
 
+<hr>
+
 <h3>
 <a id="trends" class="anchor" href="#trends" aria-hidden="true"><span class="octicon octicon-link"></span></a>Trends</h3>
+
+<h3>
+<a id="we-analyzed-35407-paintings-at-a-total-valuation-of-366754845" class="anchor" href="#we-analyzed-35407-paintings-at-a-total-valuation-of-366754845" aria-hidden="true"><span class="octicon octicon-link"></span></a><em>"We analyzed 35407 paintings at a total valuation of ,366,754,845"</em>
+</h3>
 
 <p><img src="https://raw.githubusercontent.com/ahmedhosny/theGreenCanvas/gh-pages/images/12PricePerYearwihAndy.png" alt="">
 <img src="https://raw.githubusercontent.com/ahmedhosny/theGreenCanvas/gh-pages/images/13PricePerYearwihoutAndy.png" alt="">
