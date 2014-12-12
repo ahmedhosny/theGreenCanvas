@@ -31,11 +31,13 @@
     <!-- MAIN CONTENT -->
     <div id="main_content_wrap" class="outer">
       <section id="main_content" class="inner">
-        <h2>
-<a id="computer-science-109-final-project---fall-2014" class="anchor" href="#computer-science-109-final-project---fall-2014" aria-hidden="true"><span class="octicon octicon-link"></span></a>Computer Science 109 Final Project - Fall 2014</h2>
+        <h3>
+<a id="computer-science-109-final-project---fall-2014" class="anchor" href="#computer-science-109-final-project---fall-2014" aria-hidden="true"><span class="octicon octicon-link"></span></a>Computer Science 109 Final Project - Fall 2014</h3>
 
-<h3>
-<a id="ahmed-hosny-jili-huang-yingyi-wang" class="anchor" href="#ahmed-hosny-jili-huang-yingyi-wang" aria-hidden="true"><span class="octicon octicon-link"></span></a>Ahmed Hosny, Jili Huang, Yingyi Wang</h3>
+<h4>
+<a id="ahmed-hosny-jili-huang-yingyi-wang" class="anchor" href="#ahmed-hosny-jili-huang-yingyi-wang" aria-hidden="true"><span class="octicon octicon-link"></span></a>Ahmed Hosny, Jili Huang, Yingyi Wang</h4>
+
+<p><img src="https://raw.githubusercontent.com/ahmedhosny/theGreenCanvas/gh-pages/images/art.png" alt=""></p>
 
 <h3>
 <a id="background-and-motivation" class="anchor" href="#background-and-motivation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Background and Motivation</h3>
@@ -67,8 +69,50 @@
 <h3>
 <a id="data-scraping" class="anchor" href="#data-scraping" aria-hidden="true"><span class="octicon octicon-link"></span></a>Data Scraping</h3>
 
-<p><img src="https://raw.githubusercontent.com/ahmedhosny/theGreenCanvas/gh-pages/images/0DATAFRAME.png" alt="">
-<img src="https://raw.githubusercontent.com/ahmedhosny/theGreenCanvas/gh-pages/images/01Sample.png" alt="">
+<h4>
+<a id="source" class="anchor" href="#source" aria-hidden="true"><span class="octicon octicon-link"></span></a>Source</h4>
+
+<p>To construct our database for analysis. We looked into the <a href="http://artsalesindex.artinfo.com/asi/security/landing-page.ai">Blouin art sales index website</a>, which has over 5 million auction records for modern paintings.</p>
+
+<p><img src="https://raw.githubusercontent.com/ahmedhosny/theGreenCanvas/gh-pages/images/front%20page.jpg" alt=""></p>
+
+<h4>
+<a id="part-1-create-dataframe" class="anchor" href="#part-1-create-dataframe" aria-hidden="true"><span class="octicon octicon-link"></span></a>Part 1 Create Dataframe</h4>
+
+<p>To get access to information about each paintings, we actually make a 3-step subsequent query using beautifulsoup</p>
+
+<h5>
+<a id="step-1" class="anchor" href="#step-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>step 1</h5>
+
+<p>Using artists' name (alphabet order) - Take 'A' as an example, the url '<a href="http://artsalesindex.artinfo.com/asi/search/artistsAtoZ.ai?lastName=A&amp;startRowNum=">http://artsalesindex.artinfo.com/asi/search/artistsAtoZ.ai?lastName=A&amp;startRowNum=</a>' allows access to the artist's paintings. From here we create a list of all url's to their works.</p>
+
+<p><img src="https://raw.githubusercontent.com/ahmedhosny/theGreenCanvas/gh-pages/images/dataScraping%20Page1.jpg" alt=""></p>
+
+<h5>
+<a id="step-2" class="anchor" href="#step-2" aria-hidden="true"><span class="octicon octicon-link"></span></a>step 2:</h5>
+
+<p>From each of the url above we come to the booklet of each artists. Here we collect the url's to each individual paintings.</p>
+
+<p><img src="https://raw.githubusercontent.com/ahmedhosny/theGreenCanvas/gh-pages/images/dataScraping%20Page2.jpg" alt=""></p>
+
+<h5>
+<a id="step-3" class="anchor" href="#step-3" aria-hidden="true"><span class="octicon octicon-link"></span></a>step 3:</h5>
+
+<p>Finally we have arrive to the info page for each of these artworks. We create our dataframe from these pages.</p>
+
+<p><img src="https://raw.githubusercontent.com/ahmedhosny/theGreenCanvas/gh-pages/images/dataScraping%20Page3.jpg" alt=""></p>
+
+<h4>
+<a id="part-2-data-joining-and-cleaning" class="anchor" href="#part-2-data-joining-and-cleaning" aria-hidden="true"><span class="octicon octicon-link"></span></a>Part 2 Data joining and cleaning</h4>
+
+<p>From the dataframe we notice there is some inconsistency and missing fields. Our next step is to join the data set and filter out missing field data. The dataframe looks something like this.</p>
+
+<p><img src="https://raw.githubusercontent.com/ahmedhosny/theGreenCanvas/gh-pages/images/0DATAFRAME.png" alt=""></p>
+
+<h3>
+<a id="image-processing" class="anchor" href="#image-processing" aria-hidden="true"><span class="octicon octicon-link"></span></a>Image processing</h3>
+
+<p><img src="https://raw.githubusercontent.com/ahmedhosny/theGreenCanvas/gh-pages/images/01Sample.png" alt="">
 <img src="https://raw.githubusercontent.com/ahmedhosny/theGreenCanvas/gh-pages/images/02Major%20Colors.png" alt="">
 <img src="https://raw.githubusercontent.com/ahmedhosny/theGreenCanvas/gh-pages/images/03RGB.png" alt="">
 <img src="https://raw.githubusercontent.com/ahmedhosny/theGreenCanvas/gh-pages/images/04GrayScale.png" alt="">
