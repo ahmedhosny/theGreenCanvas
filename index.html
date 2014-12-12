@@ -77,6 +77,8 @@
 
 <hr>
 
+<hr>
+
 <h3>
 <a id="data-scraping" class="anchor" href="#data-scraping" aria-hidden="true"><span class="octicon octicon-link"></span></a>Data Scraping</h3>
 
@@ -119,6 +121,8 @@
 <p>From the dataframe we notice there is some inconsistency and missing fields. Our next step is to join the data set and filter out missing field data. The dataframe looks something like this.</p>
 
 <p><img src="https://raw.githubusercontent.com/ahmedhosny/theGreenCanvas/gh-pages/images/0DATAFRAME.png" alt=""></p>
+
+<hr>
 
 <hr>
 
@@ -193,18 +197,22 @@ A post-processing step is required here. The RGB value of the most dominant colo
 
 <hr>
 
-<h3>
-<a id="we-analyzed-35407-paintings-at-a-total-valuation-of-9366754845-prices-include-a-maximum-of-119922500-a-mean-of-264545-and-a-minimum-of-3" class="anchor" href="#we-analyzed-35407-paintings-at-a-total-valuation-of-9366754845-prices-include-a-maximum-of-119922500-a-mean-of-264545-and-a-minimum-of-3" aria-hidden="true"><span class="octicon octicon-link"></span></a><em>"We analyzed 35407 paintings at a total valuation of $9,366,754,845. Prices include a maximum of $119,922,500 a mean of $264,545 and a minimum of $3"</em>
-</h3>
+<hr>
+
+<h4>
+<a id="we-analyzed-35407-paintings-at-a-total-valuation-of-9366754845-prices-included-a-maximum-of-119922500-a-mean-of-264545-and-a-minimum-of-3" class="anchor" href="#we-analyzed-35407-paintings-at-a-total-valuation-of-9366754845-prices-included-a-maximum-of-119922500-a-mean-of-264545-and-a-minimum-of-3" aria-hidden="true"><span class="octicon octicon-link"></span></a><em>"We analyzed 35407 paintings at a total valuation of $9,366,754,845. Prices included a maximum of $119,922,500 a mean of $264,545 and a minimum of $3"</em>
+</h4>
+
+<hr>
 
 <hr>
 
 <h3>
 <a id="trends" class="anchor" href="#trends" aria-hidden="true"><span class="octicon octicon-link"></span></a>Trends</h3>
 
-<h3>
+<h4>
 <a id="paintings-produced-in-the-1960s-recorded-the-highest-salesthis-coincides-with-the-many-artistic-impulses-that-began-to-gain-momentum-during-that-period-including-the-explosion-of-consumerism-and-popular-culture" class="anchor" href="#paintings-produced-in-the-1960s-recorded-the-highest-salesthis-coincides-with-the-many-artistic-impulses-that-began-to-gain-momentum-during-that-period-including-the-explosion-of-consumerism-and-popular-culture" aria-hidden="true"><span class="octicon octicon-link"></span></a><em>"Paintings produced in the 1960's recorded the highest sales.This coincides with the many artistic impulses that began to gain momentum during that period including the explosion of consumerism and popular culture."</em>
-</h3>
+</h4>
 
 <p>Below is a comparison of prices aggregated per year with and without Andy Warhol.</p>
 
@@ -212,24 +220,24 @@ A post-processing step is required here. The RGB value of the most dominant colo
 
 <p><img src="https://raw.githubusercontent.com/ahmedhosny/theGreenCanvas/gh-pages/images/13PricePerYearwihoutAndy.png" alt=""></p>
 
-<h3>
+<h4>
 <a id="paintings-with-whites-grays-and-blacks-as-dominant-colors-are-most-likely-to-have-high-sales-values-compared-to-other-more-saturated-colors" class="anchor" href="#paintings-with-whites-grays-and-blacks-as-dominant-colors-are-most-likely-to-have-high-sales-values-compared-to-other-more-saturated-colors" aria-hidden="true"><span class="octicon octicon-link"></span></a><em>"Paintings with whites, grays and blacks as dominant colors are most likely to have high sales values, compared to other more saturated colors"</em>
-</h3>
+</h4>
 
 <p><img src="https://raw.githubusercontent.com/ahmedhosny/theGreenCanvas/gh-pages/images/14PricePerDominantColorsCombine.png" alt=""></p>
 
-<h3>
+<h4>
 <a id="paintings-where-low-corner-percentages-are-detected-are-also-more-likely-to-have-high-sales-values" class="anchor" href="#paintings-where-low-corner-percentages-are-detected-are-also-more-likely-to-have-high-sales-values" aria-hidden="true"><span class="octicon octicon-link"></span></a><em>"Paintings where low corner percentages are detected are also more likely to have high sales values."</em>
-</h3>
+</h4>
 
 <p>Below are corner percentages grouped by three artist bands: master, famous and non famous. 9 artists that had large deviation are the plotted separately.</p>
 
 <p><img src="https://raw.githubusercontent.com/ahmedhosny/theGreenCanvas/gh-pages/images/15CornerPercentageGroupby.png" alt="">
 <img src="https://raw.githubusercontent.com/ahmedhosny/theGreenCanvas/gh-pages/images/17CornerPercentageArtist.png" alt=""></p>
 
-<h3>
+<h4>
 <a id="auction-of-very-valuable-pieces-tend-to-coincide-with-successful-exhibitions" class="anchor" href="#auction-of-very-valuable-pieces-tend-to-coincide-with-successful-exhibitions" aria-hidden="true"><span class="octicon octicon-link"></span></a><em>"Auction of very valuable pieces tend to coincide with successful exhibitions."</em>
-</h3>
+</h4>
 
 <p>From these famous artists's principles we've found an interesting feature. They tend to have very high peak at certain time. After research we realize all these moments they have run a very successful exhibition (eg: the Grand Opening of Mark Rothko Art Centre at 2006, Paul Cezanne exhibition 2013 the Museum of Fine Arts in Budapest ...). Then some masterpiece will be on auction. It is very likely that the media advertisement and public exhibition work together to attract attention first, then some really valuable art work will be sold.</p>
 
@@ -244,7 +252,7 @@ A post-processing step is required here. The RGB value of the most dominant colo
 <h3>
 <a id="machine-learning" class="anchor" href="#machine-learning" aria-hidden="true"><span class="octicon octicon-link"></span></a>Machine Learning</h3>
 
-<p>In an attempt to develop a machine learning platform for pricing artwork, we created a linear regression model specifcally fit for paintings by Spanish painter Pablo Picasso. We used a set of 4000 paintings for training and another equal set for testing. Our model reached a  predicted prices/actual prices correlation of 0.58. Using a single log on the price value gave the most optimum results.</p>
+<p>In an attempt to develop a machine learning platform for pricing artwork, we created a linear regression model specifically fit for paintings by Spanish painter Pablo Picasso. We used a set of 4000 paintings for training and another equal set for testing. Our model reached a  predicted prices/actual prices correlation of 0.58. Using a single log on the price value gave the most optimum results.</p>
 
 <p><img src="https://raw.githubusercontent.com/ahmedhosny/theGreenCanvas/gh-pages/images/Pablo%20Picasso.jpg" alt=""></p>
 
