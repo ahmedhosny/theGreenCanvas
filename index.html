@@ -32,7 +32,7 @@
     <div id="main_content_wrap" class="outer">
       <section id="main_content" class="inner">
         <h3>
-<a id="computer-science-109-final-project---fall-2014" class="anchor" href="#computer-science-109-final-project---fall-2014" aria-hidden="true"><span class="octicon octicon-link"></span></a>Computer Science 109 Final Project - Fall 2014</h3>
+<a id="data-science-cs109-final-project---fall-2014" class="anchor" href="#data-science-cs109-final-project---fall-2014" aria-hidden="true"><span class="octicon octicon-link"></span></a>Data Science CS109 Final Project - Fall 2014</h3>
 
 <h4>
 <a id="ahmed-hosny-jili-huang-yingyi-wang" class="anchor" href="#ahmed-hosny-jili-huang-yingyi-wang" aria-hidden="true"><span class="octicon octicon-link"></span></a>Ahmed Hosny, Jili Huang, Yingyi Wang</h4>
@@ -89,14 +89,14 @@
 <p><img src="https://raw.githubusercontent.com/ahmedhosny/theGreenCanvas/gh-pages/images/dataScraping%20Page1.jpg" alt=""></p>
 
 <h5>
-<a id="step-2" class="anchor" href="#step-2" aria-hidden="true"><span class="octicon octicon-link"></span></a>step 2:</h5>
+<a id="step-2" class="anchor" href="#step-2" aria-hidden="true"><span class="octicon octicon-link"></span></a>step 2</h5>
 
 <p>From each of the url above we come to the booklet of each artists. Here we collect the url's to each individual paintings.</p>
 
 <p><img src="https://raw.githubusercontent.com/ahmedhosny/theGreenCanvas/gh-pages/images/dataScraping%20Page2.jpg" alt=""></p>
 
 <h5>
-<a id="step-3" class="anchor" href="#step-3" aria-hidden="true"><span class="octicon octicon-link"></span></a>step 3:</h5>
+<a id="step-3" class="anchor" href="#step-3" aria-hidden="true"><span class="octicon octicon-link"></span></a>step 3</h5>
 
 <p>Finally we have arrive to the info page for each of these artworks. We create our dataframe from these pages.</p>
 
@@ -112,17 +112,76 @@
 <h3>
 <a id="image-processing" class="anchor" href="#image-processing" aria-hidden="true"><span class="octicon octicon-link"></span></a>Image processing</h3>
 
-<p><img src="https://raw.githubusercontent.com/ahmedhosny/theGreenCanvas/gh-pages/images/01Sample.png" alt="">
-<img src="https://raw.githubusercontent.com/ahmedhosny/theGreenCanvas/gh-pages/images/02Major%20Colors.png" alt="">
-<img src="https://raw.githubusercontent.com/ahmedhosny/theGreenCanvas/gh-pages/images/03RGB.png" alt="">
-<img src="https://raw.githubusercontent.com/ahmedhosny/theGreenCanvas/gh-pages/images/04GrayScale.png" alt="">
-<img src="https://raw.githubusercontent.com/ahmedhosny/theGreenCanvas/gh-pages/images/05Thresheld.png" alt="">
-<img src="https://raw.githubusercontent.com/ahmedhosny/theGreenCanvas/gh-pages/images/06brightness.png" alt="">
-<img src="https://raw.githubusercontent.com/ahmedhosny/theGreenCanvas/gh-pages/images/07CornerDetection.png" alt="">
-<img src="https://raw.githubusercontent.com/ahmedhosny/theGreenCanvas/gh-pages/images/08Edge%20Detection.png" alt="">
-<img src="https://raw.githubusercontent.com/ahmedhosny/theGreenCanvas/gh-pages/images/09FaceDetection.png" alt="">
-<img src="https://raw.githubusercontent.com/ahmedhosny/theGreenCanvas/gh-pages/images/10DataWithImageProcessing.png" alt="">
-<img src="https://raw.githubusercontent.com/ahmedhosny/theGreenCanvas/gh-pages/images/12PricePerYearwihAndy.png" alt="">
+<h4>
+<a id="sample-image" class="anchor" href="#sample-image" aria-hidden="true"><span class="octicon octicon-link"></span></a>Sample Image</h4>
+
+<p>A single image will be used to illustrate the different image processing techniques used in the analysis.</p>
+
+<p><img src="https://raw.githubusercontent.com/ahmedhosny/theGreenCanvas/gh-pages/images/01Sample.png" alt=""></p>
+
+<h4>
+<a id="most-dominant-colors" class="anchor" href="#most-dominant-colors" aria-hidden="true"><span class="octicon octicon-link"></span></a>Most Dominant Colors</h4>
+
+<p>This function returns the hue of the most dominant color in the image. It first creates a predefined number of clusters from the RGB values in the image array. A larger number of clusters produces a more accurate result but is computationally more expensive. It then assigns codes to each item in the newly clustered array. A histogram counts the number of occurrences of each code. The RGB value that has the highest number of occurrences is the most dominant in the image.
+A post-processing step is required here. The RGB value of the most dominant color is converted into HSL (hue,saturation, lightness). Thresholding is then used to assign each color to a bucket from the following: blacks, whites, grays, reds, yellows, greens, cyans, blues, magentas, reds</p>
+
+<p><img src="https://raw.githubusercontent.com/ahmedhosny/theGreenCanvas/gh-pages/images/02Major%20Colors.png" alt=""></p>
+
+<h4>
+<a id="unique-color-ratio" class="anchor" href="#unique-color-ratio" aria-hidden="true"><span class="octicon octicon-link"></span></a>Unique Color Ratio¶</h4>
+
+<p>This function calculates the number of unique colors in an image as a ration of the total number of pixels. A list of color values across the image is generated. Duplicates are removed and the length of the duplicate-free list is calculated and divded by total number of pixels. If the result is close to 0, the image has very few unique colors i.e. large areas of one solid color. If the result is close to 1, the image is very colorful as every pixel has its own unique color. A 0 result indicates a grayscale image.</p>
+
+<p><img src="https://raw.githubusercontent.com/ahmedhosny/theGreenCanvas/gh-pages/images/03RGB.png" alt=""></p>
+
+<h4>
+<a id="image-thresholding" class="anchor" href="#image-thresholding" aria-hidden="true"><span class="octicon octicon-link"></span></a>Image Thresholding</h4>
+
+<p>Here, we apply a thresholding to the image. If pixel value is greater than a threshold value(here we use 127, range from 0-255), it is assigned one value (255,white), else it is assigned another value (0,black). Then we calculate the Percentage of white or black in the image, so we can get the ratio of black pixels in the greyscale of paintings.</p>
+
+<p><img src="https://raw.githubusercontent.com/ahmedhosny/theGreenCanvas/gh-pages/images/04GrayScale.png" alt=""></p>
+
+<p><img src="https://raw.githubusercontent.com/ahmedhosny/theGreenCanvas/gh-pages/images/05Thresheld.png" alt=""></p>
+
+<h4>
+<a id="relative-high-and-low-brightness-ratio" class="anchor" href="#relative-high-and-low-brightness-ratio" aria-hidden="true"><span class="octicon octicon-link"></span></a>Relative High and low Brightness Ratio</h4>
+
+<p>We calculate the average brightness of each paintings here. Then we counts how many pixels have two times of the average brightness and how many pixels have less than half of the mean brightness of that image. So we can get the ratio of these two relatively values of each image. Because different from the mean brightness of overall image, sometimes we say this image has brightness because it has more higher ratio of bright pixels compare to the low pixels. We may get the feeling by comparison. One image has average of 100 brightness but has very low std does not feel more bright than a painting with 90 brightness but has a higher std.</p>
+
+<p><img src="https://raw.githubusercontent.com/ahmedhosny/theGreenCanvas/gh-pages/images/06brightness.png" alt=""></p>
+
+<h4>
+<a id="harris-corner-detection" class="anchor" href="#harris-corner-detection" aria-hidden="true"><span class="octicon octicon-link"></span></a>Harris Corner Detection</h4>
+
+<p>We use Harris Corner Detection to detect the corner in the paiting. Corner is the intersection of two edges, it represents a point in which the directions of these two edges change. Hence, the gradient of the image (in both directions) have a high variation, which can be used to detect it. With that, we can calcluate the ration of pixels as corners in the full image.</p>
+
+<p><img src="https://raw.githubusercontent.com/ahmedhosny/theGreenCanvas/gh-pages/images/07CornerDetection.png" alt=""></p>
+
+<h4>
+<a id="canny-edge-detection" class="anchor" href="#canny-edge-detection" aria-hidden="true"><span class="octicon octicon-link"></span></a>Canny Edge Detection</h4>
+
+<p>This function use Canny Edge Detection algorithm to detect the edges in the image. And then calculate the percentage of pixels recognized as edges in the whole picture.</p>
+
+<p><img src="https://raw.githubusercontent.com/ahmedhosny/theGreenCanvas/gh-pages/images/08Edge%20Detection.png" alt=""></p>
+
+<h4>
+<a id="haar-cascade-face-detection" class="anchor" href="#haar-cascade-face-detection" aria-hidden="true"><span class="octicon octicon-link"></span></a>Haar-cascade Face Detection</h4>
+
+<p>We use Haar-cascade Detection in OpenCV to detect the face in paintings. With that, we could know whether this looks like a portrait in a way. Because in contemporary paintings, it is hard to understand the image. Portrait does not necessarily means a portrait. We want to test for a paintings which is somewhat readable as human or face will have different influence on the price. We load haarcascade_frontalface_default as XML classifiers. It will show how many faces are detected in the paintings.</p>
+
+<p><img src="https://raw.githubusercontent.com/ahmedhosny/theGreenCanvas/gh-pages/images/09FaceDetection.png" alt=""></p>
+
+<h4>
+<a id="dataframe-integration" class="anchor" href="#dataframe-integration" aria-hidden="true"><span class="octicon octicon-link"></span></a>Dataframe integration</h4>
+
+<p>The output from all these routines is then stored into the previously created dataframe.</p>
+
+<p><img src="https://raw.githubusercontent.com/ahmedhosny/theGreenCanvas/gh-pages/images/10DataWithImageProcessing.png" alt=""></p>
+
+<h3>
+<a id="trends" class="anchor" href="#trends" aria-hidden="true"><span class="octicon octicon-link"></span></a>Trends</h3>
+
+<p><img src="https://raw.githubusercontent.com/ahmedhosny/theGreenCanvas/gh-pages/images/12PricePerYearwihAndy.png" alt="">
 <img src="https://raw.githubusercontent.com/ahmedhosny/theGreenCanvas/gh-pages/images/13PricePerYearwihoutAndy.png" alt="">
 <img src="https://raw.githubusercontent.com/ahmedhosny/theGreenCanvas/gh-pages/images/14PricePerDominantColorsCombine.png" alt="">
 <img src="https://raw.githubusercontent.com/ahmedhosny/theGreenCanvas/gh-pages/images/15CornerPercentageGroupby.png" alt="">
